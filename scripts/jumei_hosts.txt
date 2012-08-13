@@ -9,11 +9,23 @@
 	!images.jumei.com
 	!images2.jumei.com
 
+    # email
+    !.corp.jumei.com
+    !mail.jumei.com
+
 	# bj, cd, mall, ...
     .jumei.com
 
 
 192.168.25.9
+	# statics
+	!images.jumei.com
+	!images2.jumei.com
+
+    # email
+    !.corp.jumei.com
+    !mail.jumei.com
+
 	.jumeicd.com
 	.jumei.com
 
