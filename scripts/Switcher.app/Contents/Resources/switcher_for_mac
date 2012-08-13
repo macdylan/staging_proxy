@@ -1,0 +1,73 @@
+#!/bin/bash
+
+#
+# Created by Dylan on 3/14/10.
+# Copyright 2010 ~. All rights reserved.
+
+PACFILE='http://raw.github.com/file.pac'
+#DEVICE=`netstat -nr | grep '^default' | grep -v 'ppp' | awk '{print $6}'`
+DEVICE='Wi-Fi' # or Ethernet
+
+usage() {
+    echo "   -d Set device [Wi-Fi | Ethernet]"
+    echo "   -f Set PAC file to read"
+    exit
+}
+
+reloadDevice() {
+    deviceTurnOff
+    setDevicePac
+    deviceTurnOn
+}
+
+deviceTurnOff() {
+    [ "$DEVICE" = "" ] && return 1
+    networksetup -setautoproxystate $DEVICE off
+}
+
+deviceTurnOn() {
+    [ "$DEVICE" = "" ] && return 1
+    networksetup -setautoproxystate $DEVICE on
+}
+
+setDevicePac() {
+    [ "$DEVICE" = "" ] && return 1
+    [ "$PACFILE" = "" ] && return 1
+    
+    networksetup -setautoproxyurl $DEVICE "$PACFILE"
+}
+
+STATE=`networksetup -getautoproxyurl $DEVICE | grep 'Enable' | cut -d ' ' -f 2`
+
+while getopts ":d:f:" opt
+do
+    case $opt in
+        d)
+            DEVICE=$OPTARG
+            ;;
+        f)
+            PACFILE=$OPTARG
+            ;;
+        \?)
+            usage
+            ;;
+        :)
+            echo "Option -$OPTARG requires an argument"
+            usage
+            ;;
+    esac
+done
+
+case "$STATE" in
+    "No")
+        reloadDevice
+        echo "Config file $PACFILE has been updated on $DEVICE"
+        ;;
+    "Yes")
+        deviceTurnOff
+        echo "On $DEVICE the proxy has been closed"
+        ;;
+esac
+
+
+exit 0

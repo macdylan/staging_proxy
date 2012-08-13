@@ -1,0 +1,18 @@
+# vim: set noet fenc= ff=unix sts=4 sw=4 ts=4
+
+1.2.3.4:8118
+	# comments
+	hostname
+    hostname1
+
+	# exclude
+	!hostnameX
+	!hostnameY
+
+	# top-level
+    .jumei.com
+
+
+1.2.3.5
+    # no effect
+	.jumei.com

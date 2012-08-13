@@ -1,0 +1,19 @@
+# vim: set noet fenc= ff=unix sts=4 sw=4 ts=4
+
+114.112.69.252
+	# koubei staging
+	admin.koubei.jumei.com
+	koubei.jumei.com
+
+	# statics
+	!images.jumei.com
+	!images2.jumei.com
+
+	# bj, cd, mall, ...
+    .jumei.com
+
+
+192.168.25.9
+	.jumeicd.com
+	.jumei.com
+
