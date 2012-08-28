@@ -3,7 +3,7 @@
 114.112.69.252
 	# koubei staging
 	admin.koubei.jumei.com
-    koubei.int.jumei.com
+    koubeiman.int.jumei.com
 	koubei.jumei.com
 
 	# statics
