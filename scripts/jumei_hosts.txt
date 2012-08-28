@@ -13,6 +13,7 @@
     !.corp.jumei.com
     !mail.jumei.com
 
+    !.int.jumei.com
 	# bj, cd, mall, ...
     .jumei.com
 

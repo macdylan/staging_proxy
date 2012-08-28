@@ -1,4 +1,4 @@
-/* Last update: Mon Aug 13 17:07:23 2012 */
+/* Last update: Tue Aug 28 12:00:47 2012 */
 function FindProxyForURL(url, host) {
     if (isPlainHostName(host)) return "DIRECT";
     var H_114_112_69_252 = "PROXY 114.112.69.252:80";
@@ -8,6 +8,7 @@ function FindProxyForURL(url, host) {
     if(dnsDomainIs(host, "images2.jumei.com")) return "DIRECT";
     if(dnsDomainIs(host, ".corp.jumei.com")) return "DIRECT";
     if(dnsDomainIs(host, "mail.jumei.com")) return "DIRECT";
+    if(dnsDomainIs(host, ".int.jumei.com")) return "DIRECT";
     if(dnsDomainIs(host, ".jumei.com")) return H_114_112_69_252;
     var H_192_168_25_9 = "PROXY 192.168.25.9:80";
     if(dnsDomainIs(host, "images.jumei.com")) return "DIRECT";
