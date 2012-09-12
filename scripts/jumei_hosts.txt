@@ -17,6 +17,10 @@
     !.int.jumei.com
     !tr.jumei.com
 	# bj, cd, mall, ...
+    #.jumei.com
+
+# ds staging
+117.79.131.38
     .jumei.com
 
 
@@ -30,5 +34,5 @@
     !mail.jumei.com
 
 	.jumeicd.com
-	.jumei.com
+	#.jumei.com
 
