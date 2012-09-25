@@ -4,7 +4,8 @@
 # Created by Dylan on 3/14/10.
 # Copyright 2010 ~. All rights reserved.
 
-PACFILE='https://raw.github.com/macdylan/staging_proxy/master/scripts/jumei_dev.pac'
+PACFILE='http://bit.ly/QDALI7'
+#PACFILE='https://raw.github.com/macdylan/staging_proxy/master/scripts/jumei_dev.pac'
 #DEVICE=`netstat -nr | grep '^default' | grep -v 'ppp' | awk '{print $6}'`
 DEVICE='Wi-Fi' # or Ethernet
 
